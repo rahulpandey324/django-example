@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% extends "basic_app/base.html" %}
+
+  {% block body_block %}
+
+  <br>
+  <h1>Welcome to SIGNUP</h1>
+  <br>
+  <div class="container">
+
+    <form method="POST">
+      {{ form.as_p }}
+      {% csrf_token %}
+
+      <input type="submit" value="Submit">
+    </form>
+
+  </div>
+
+  {% endblock %}
